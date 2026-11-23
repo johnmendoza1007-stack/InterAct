@@ -1,0 +1,25 @@
+/* Profile-only layout and input rules reuse the existing panel/button/form conventions. */
+#pageContent[data-view="profile"]{font-size:1rem;line-height:1.65;color:var(--ink);overflow-wrap:anywhere}
+#pageContent[data-view="profile"] .profile-panel{margin-top:1.25rem}
+#pageContent[data-view="profile"] .profile-photo-row{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem}
+#pageContent[data-view="profile"] .profile-photo-wrap{position:relative;width:8rem;height:8rem;flex:0 0 8rem;margin:.25rem .5rem .75rem 0}
+#pageContent[data-view="profile"] .profile-photo{display:grid;place-items:center;width:100%;height:100%;overflow:hidden;border-radius:50%;background:var(--mint);border:2px solid var(--line);color:var(--ptc-dark);font:800 3rem/1 Manrope,sans-serif}
+#pageContent[data-view="profile"] .profile-photo img{width:100%;height:100%;object-fit:cover}
+#pageContent[data-view="profile"] .profile-camera{position:absolute;right:-.25rem;bottom:0;display:grid;place-items:center;min-width:2.75rem;width:2.75rem;height:2.75rem;padding:.625rem;border-radius:50%;background:var(--white);color:var(--ptc-dark);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+#pageContent[data-view="profile"] .profile-photo-copy{flex:1 1 18rem;min-width:0}
+#pageContent[data-view="profile"] .profile-photo-copy p{margin:.5rem 0;font-size:1rem;line-height:1.65;color:var(--ink)}
+#pageContent[data-view="profile"] .profile-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+#pageContent[data-view="profile"] [hidden]{display:none!important}
+#pageContent[data-view="profile"] .profile-form{display:grid;gap:1.25rem;max-width:48rem;margin-top:1.25rem}
+#pageContent[data-view="profile"] .profile-field{display:grid;gap:.5rem;min-width:0}
+#pageContent[data-view="profile"] .profile-field label{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.5;margin:0}
+#pageContent[data-view="profile"] .profile-field input{font:400 1rem/1.5 'DM Sans',sans-serif;width:100%;min-height:3rem;padding:.75rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink)}
+#pageContent[data-view="profile"] .profile-field input[readonly]{background:var(--mint-soft);color:#3e594b}
+#pageContent[data-view="profile"] .profile-field small{font-size:1rem;line-height:1.6;color:#3e594b}
+#pageContent[data-view="profile"] :is(button,input):focus-visible{outline:3px solid var(--ptc);outline-offset:3px}
+#pageContent[data-view="profile"] button{font-size:1rem;line-height:1.5;min-height:2.75rem;white-space:normal}
+#pageContent[data-view="profile"] button:disabled{opacity:.65;cursor:wait}
+#pageContent[data-view="profile"] [role="status"]{font-size:1rem;line-height:1.65;margin:.5rem 0}
+#avatar{overflow:hidden}
+#avatar>img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+@media(max-width:36rem){#pageContent[data-view="profile"] .profile-photo-row{gap:1rem}#pageContent[data-view="profile"] .profile-photo-copy{flex-basis:100%}}

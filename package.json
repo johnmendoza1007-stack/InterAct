@@ -1,0 +1,13 @@
+{
+  "name": "pato-prototype",
+  "version": "1.2.0",
+  "private": true,
+  "description": "PATO job interview simulator with Google Workspace sign-in for Users and separate Administrator login",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.15.1"
+  }
+}

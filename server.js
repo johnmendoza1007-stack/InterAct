@@ -18,7 +18,7 @@ function loadEnv() {
 }
 loadEnv();
 
-const HOST = 'localhost';
+const HOST = '0.0.0.0';
 const PORT = Number(process.env.PORT) || 3000;
 const ROOT = __dirname;
 const DOMAIN = 'paterostechnologicalcollege.edu.ph';

@@ -1953,6 +1953,33 @@ const server = http.createServer(async (req, res) => {
   } catch {
     return res.writeHead(400).end('Bad request');
   }
+  // Only allow public browser assets to be served.
+const publicFiles = new Set([
+  '/index.html',
+  '/app.js',
+  '/style.css',
+  '/dashboard-accents.css',
+  '/login-enhancements.css',
+  '/interview-flow.css',
+  '/profile.css',
+  '/interview-flow.js',
+  '/pato-3d.js',
+  '/pato-menu-icons.js',
+  '/sidebar-controls.js'
+]);
+
+const assetPathAllowed =
+  /^\/assets\/[a-zA-Z0-9_/-]+\.(png|jpg|jpeg|gif|webp|svg|ico)$/i
+    .test(requestPath);
+
+if (
+  requestPath !== '/' &&
+  !publicFiles.has(requestPath) &&
+  !assetPathAllowed
+) {
+  res.writeHead(404).end('Not found');
+  return;
+}
   if (requestPath === '/') requestPath = '/index.html';
   const filePath = path.resolve(ROOT, '.' + requestPath);
   if (filePath !== ROOT && !filePath.startsWith(ROOT + path.sep)) {

@@ -5,7 +5,7 @@
  * Focus Areas, Gamification + Duck Wardrobe, Learning Hub, and Admin Portal.
  */
 
-const GOOGLE_CLIENT_ID = "988807079768-c8k5m64e8l4bdvs4q80cfe3dadafpj02.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "190884994641-k87g0g0ni63agq7bnsbp590qqtp2gn4l.apps.googleusercontent.com";
 
 const BSIT_CATEGORIES = [
   { name: "Web Development", icon: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M7 13l2 2-2 2\"/><path d=\"M12 17h4\"/></svg>", desc: "HTML/CSS/JS architecture, browser DevTools debugging, REST APIs, and responsive UI engineering.", jobDescription: "Web developers build and maintain the interfaces and services people use in a browser. Day to day, they turn designs into responsive pages with HTML, CSS, and JavaScript, connect front ends to REST APIs, and use browser DevTools to trace layout, performance, and network issues. They solve problems such as broken layouts on small screens, slow page loads, failed API requests, and inconsistent behavior across browsers, while keeping the experience accessible and easy to use." },
